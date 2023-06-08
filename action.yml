@@ -1,0 +1,35 @@
+name: 'Release type PR check'
+author: 'GISCE'
+description: 'A GitHub Action to check pullrequest labels [patch minor major].'
+inputs:
+  github_token:
+    description: 'GitHub API Access Token.'
+    default: ${{ github.token }}
+    required: false
+  merge_commit:
+    description: 'Merge commit in to branch'
+    default: ${{ github.sha }}
+    required: false
+  pull_request_number:
+    description: 'PR number if dont want to work with sha'
+    required: false
+  owner:
+    description: 'Repo owner'
+    default: ${{ github.repository_owner }}
+    required: true
+  repository:
+    description: 'Repo owner'
+    default: ${{ github.event.repository.name }}
+    required: true
+
+outputs:
+  release_type:
+    description: "Relsease type"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
