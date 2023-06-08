@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: A action test job
+    steps:
+      - name: Execute Action
+        id: our_action
+        uses: actions/release-type-pr-checker-action@v2
+        with:
+          pull_request_number: '1'
+      - name: Get the output time
+        run: echo "The result is ${{ steps.our_action.outputs.release_type }}"
