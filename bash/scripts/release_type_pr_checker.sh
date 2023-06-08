@@ -1,3 +1,4 @@
+#!/bin/sh -l
 export GITHUB_TOKEN=$INPUT_GITHUB_TOKEN
 if [[ -z $INPUT_PULL_REQUEST_NUMBER ]];
 then
