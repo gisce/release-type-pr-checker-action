@@ -9,7 +9,7 @@ LABEL com.github.actions.description="A GitHub Action to check pullrequest label
 LABEL com.github.actions.icon="github"
 LABEL com.github.actions.color="pink"
 
-RUN apk add --no-cache --upgrade expat libuuid
+RUN apk add --no-cache --upgrade expat libuuid jq
 
 COPY python/requirements.txt /action/
 RUN apk add --no-cache build-base libffi-dev; \
