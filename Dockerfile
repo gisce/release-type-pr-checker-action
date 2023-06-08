@@ -17,7 +17,6 @@ RUN apk add --no-cache build-base libffi-dev; \
     pip install --upgrade --force --no-cache-dir -r /action/requirements.txt; \
     apk del build-base libffi-dev
 
-COPY python/publish /action/publish
 #COPY python/release_type_pr_checker.py /action/
 COPY bash/release_type_pr_checker.sh /action/
 
