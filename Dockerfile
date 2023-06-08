@@ -20,4 +20,4 @@ RUN apk add --no-cache build-base libffi-dev; \
 #COPY python/release_type_pr_checker.py /action/
 COPY bash/scripts/release_type_pr_checker.sh /action/
 
-ENTRYPOINT ["/release_type_pr_checker.sh"]
+ENTRYPOINT ["/action/release_type_pr_checker.sh"]
