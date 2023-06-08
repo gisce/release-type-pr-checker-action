@@ -1,3 +1,4 @@
+export GITHUB_TOKEN=$INPUT_GITHUB_TOKEN
 if [[ -z $INPUT_PULL_REQUEST_NUMBER ]];
 then
     PR_INFO=$(gisce_github get-commits-sha-from-merge-commit --owner $INPUT_OWNER --repository $INPUT_REPOSITORY --sha $INPUT_MERGE_COMMIT)
