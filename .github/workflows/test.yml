@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Execute Action
         id: our_action
-        uses: actions/release-type-pr-checker-action@v2
+        uses: gisce/release-type-pr-checker-action@v2
         with:
           pull_request_number: '1'
       - name: Get the output time
